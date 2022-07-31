@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&family=Rokkitt:wght@400;600;700&family=Tiro+Gurmukhi&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto",sans-serif;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    text-align: center;
+}
+.progress-container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+}
+.progress{
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    z-index: -1;
+    width: 0%;
+    transition: 0.4s ease;
+}
+.progress-container ::before{
+    content: "";
+    background-color: gainsboro;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+.circle{
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid whitesmoke;
+    transition: .4s ease;
+}
+.circle.active{
+    border-color: blue;
+}
+.btn{
+    background-color: 	#0096FF;
+    color: white;
+    border: 0;
+    border-radius: 6px;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 20px;
+}
+.btn.active{
+    transform: scale(0.98);
+}
+.btn:focus{
+    outline: 0;
+}
+.btn:disabled{
+    background-color: grey;
+    cursor: not-allowed;
+}
